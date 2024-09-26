@@ -1,5 +1,66 @@
 <!DOCTYPE html>
-<h3>HELLO WORLD</h3>
-<h2>hold me, console me and then i leave without a trace</h2>
-<h3>beep boop</h3>
-<button>naur</button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Touch my button</title>
+    <style>
+      h1 {
+        text-align: center;
+        margin-top: 16%;
+        font-family: cursive;
+      }
+      #LoveButton {
+        /*padding: 20px 40px; */
+        color: rgb(0, 0, 0);
+        border: 2px solid #2a2e2e; /* Darker border for depth */
+        border-radius: 5px; /* Slightly rounded corners */
+        padding: 9px 20px; /* Padding for size */
+        font-size: 16px; /* Text size */
+        cursor: pointer; /* Pointer on hover */
+        box-shadow: 5px 4px 2px rgba(0, 0, 0, 0.5); /* Simple shadow effect */
+        transition: all 0.1s ease; /* Smooth transition */
+        text-align: center; /* Centered text */
+        position: relative; /* Position for the hover effect */
+        display: inline-block; /* Inline-block for better sizing */
+        margin-left: 46%;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      #LoveButton:active {
+        transform: translateY(2px); /* Push down effect when clicked */
+        box-shadow: none; /* Remove shadow on click */
+        border: 2px solid #003737; /* Darker border on click */
+      }
+
+      .message {
+        display: flex;
+        flex-direction: column; /* Stack messages vertically */
+        align-items: center; /* Center horizontally */
+        margin-top: 20px; /* Space above messages */
+        font-size: 28px;
+        color: #000000;
+        animation: pop 0.5s forwards;
+      }
+      @keyframes pop {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TOUCH MY BUTTON ;)</h1>
+    <button id="LoveButton">Click Me</button>
+    <div id="messageContainer"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
